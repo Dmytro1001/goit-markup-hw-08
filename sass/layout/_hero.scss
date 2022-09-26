@@ -1,0 +1,54 @@
+.section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--hero-background-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/background-img/background-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-title {
+    font-weight: 900;
+    @include font(44px, 60px);
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-color-dark-background);
+    width: 696px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.modele-open-btn {
+    font-family: inherit;
+    font-weight: 700;
+    @include font(16px, 30px);
+    display: block;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    color: var(--text-color-dark-background);
+    background-color: var(--active-color-hover-focus);
+    border-radius: 4px;
+    border-color: transparent;
+    margin: 0 auto;
+
+    padding: 10px 32px;
+
+    transition: background-color var(--transition-duration-timing-func), box-shadow var(--transition-duration-timing-func);
+
+    &:hover,
+    &:focus {
+        background-color: var(--active-color-hover-focus-btn);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+}

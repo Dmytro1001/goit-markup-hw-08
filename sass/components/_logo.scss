@@ -1,0 +1,17 @@
+.logo {
+    font-family: var(--secondary-font-text);
+    font-weight: 700;
+    @include font(24px, 28px);
+    letter-spacing: 0.03em;
+    color: var(--logo-color-light-background);
+}
+
+.logo__style {
+    color: var(--logo-color);
+}
+
+@media screen and (min-width: 1200px) {
+    .logo {  
+            @include font(26px, 31px);
+        }
+}

@@ -1,0 +1,27 @@
+.social-link-items {
+    @extend %align;
+    column-gap: 10px;
+}
+
+.social-link {
+    @extend %align;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--primery-icon-color);
+
+    transition: color var(--transition-duration-timing-func),
+        background-color var(--transition-duration-timing-func);
+}
+
+.social-logo {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--active-color-hover-focus);
+    color: var(--text-color-dark-background);
+}
