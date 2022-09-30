@@ -4,16 +4,11 @@
     padding-bottom: 60px;
 }
 
-.page-footer__container {
-    display: flex;
-    align-items: baseline;
-}
-
 .contact-wrap {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    width: 231px;
+    align-items: center;
+    text-align: center;
 }
 
 .logo--footer {
@@ -44,10 +39,13 @@
 }
 
 .social-link-wrapper {
-    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page-footer__text {
+    display: flex;
     font-weight: 700;
     @include font(14px, 16px);
     letter-spacing: 0.03em;
@@ -63,8 +61,9 @@
 
 .page-footer__form {
     display: flex;
-    align-items: flex-end;
-    margin-left: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .page-footer__label{
@@ -85,8 +84,9 @@
 }
 
 .page-footer__input {
-    width: 358px;
+    width: 100%;
     padding: 15px 16px;
+    margin-bottom: 20px;
 
     @include font(16px, 20px);
     display: flex;
@@ -106,7 +106,9 @@
     @extend %align;
     letter-spacing: 0.06em;
     padding: 10px 28px;
-    margin-left: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
 
     color: var(--text-color-dark-background);
     background: var(--active-color-hover-focus);
@@ -129,4 +131,71 @@
     margin-left: 10px;
 
     fill: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+    .page-footer__container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .page-footer__container {
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .contact-wrap {
+        margin-right: 165px;
+    }
+
+    .page-footer__form {
+        margin-top: 60px;
+    }
+
+    .page-footer__input {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+        .page-footer__container {
+            display: flex;
+            align-items: baseline;
+        }
+    
+        .contact-wrap {
+            align-items: start;
+            margin-right: 70px;
+        }
+
+        .page-footer__items {
+            text-align: start;
+        }
+    
+        .social-link-wrapper {
+            align-items: flex-start;
+        }
+    
+        .page-footer__form {
+            align-items: flex-end;
+            margin-left: auto;
+            text-align: start;
+            flex-direction: row;
+
+        }
+    
+        .page-footer__input {
+            width: 358px;
+            margin-bottom: 0;
+        }
+    
+        .btn-subscription {
+            margin-left: 10px;
+        }
 }

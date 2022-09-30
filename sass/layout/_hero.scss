@@ -1,26 +1,36 @@
 .section-hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 1600px;
-    height: 600px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    max-width: 480px;
+    height: 400px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--hero-background-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/background-img/background-hero.jpg);
+        url(../images/background-img/Header-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+.section-hero {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/background-img/Header-mobile@2x.jpg);
+    }
+}
+
 .hero-title {
     font-weight: 900;
-    @include font(44px, 60px);
+    @include font(26px, 42px);
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-color-dark-background);
-    width: 696px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -41,7 +51,7 @@
     border-color: transparent;
     margin: 0 auto;
 
-    padding: 10px 32px;
+    padding: 10px 24px;
 
     transition: background-color var(--transition-duration-timing-func), box-shadow var(--transition-duration-timing-func);
 
@@ -51,4 +61,58 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
     }
+}
+
+@media screen and (min-width: 480px) {
+    .hero-title {
+            min-width: 360px;
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .section-hero {
+            max-width: 768px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/background-img/Header-tab.jpg);
+        }
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .section-hero {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/background-img/Header-tab@2x.jpg);
+            }
+        }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-hero {
+            padding-top: 200px;
+            padding-bottom: 200px;
+            max-width: 1600px;
+            height: 600px;
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/background-img/Header-desk.jpg);
+        }
+    
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .section-hero {
+                background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/background-img/Header-desk@2x.jpg);
+            }
+        }
+    
+        .hero-title {
+            @include font(44px, 60px);
+            width: 696px;
+        }
+    
+        .modele-open-btn {    
+            padding: 10px 32px;
+        }
 }

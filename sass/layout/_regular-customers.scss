@@ -1,11 +1,13 @@
 .clients__items {
-    @extend %align;
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    @extend %align;
 }
 
 .company-link {
     @extend %align;
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid var(--primery-icon-color);
     border-radius: 4px;
@@ -27,3 +29,14 @@
     fill: currentColor
 }
 
+@media screen and (min-width: 768px) {
+    .company-link {
+        width: 226px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .company-link {
+        width: 170px;
+    }
+}

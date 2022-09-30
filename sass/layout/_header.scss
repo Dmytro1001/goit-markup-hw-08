@@ -121,14 +121,11 @@
         .menu__item-contact {
             margin-right: 0;
 
-
             &:not(:last-child) {
                 margin-bottom: 10px;
             }
         }
     }
-
-
 
     .menu__nav-contact {
         color: var(--secondary-color-text);
@@ -138,8 +135,6 @@
         align-items: center;
         padding: 0;
         @include font(12px, 14px);
-
-
     }
 
     .mail-icon,
@@ -151,7 +146,6 @@
     .mail-icon {
         width: 14px;
         height: 10px;
-
     }
 
     .phone-icon {
@@ -185,11 +179,9 @@
     .mail-icon {
         width: 16px;
         height: 12px;
-
     }
 
     .phone-icon {
-
         height: 16px;
     }
 }

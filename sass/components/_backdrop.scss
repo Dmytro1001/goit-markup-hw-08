@@ -7,13 +7,12 @@
     height: 100%;
 
     background-color: var(--backdrop-background-color);
-
+    overflow-y: scroll;
     opacity: 1;
 
     transition: opacity var(--transition-duration-timing-func),
         visibility var(--transition-duration-timing-func);
 }
-
 .backdrop.is-hidden {
     visibility: inherit;
     opacity: 0;
