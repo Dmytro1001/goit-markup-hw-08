@@ -109,7 +109,7 @@
     
         .hero-title {
             @include font(44px, 60px);
-            width: 696px;
+            min-width: 696px;
         }
     
         .modele-open-btn {    
